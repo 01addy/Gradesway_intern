@@ -19,7 +19,7 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://gradesway-intern.onrender.com/api/auth/login", {
 
         method: "POST",
         headers: {
