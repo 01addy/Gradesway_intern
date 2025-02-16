@@ -5,26 +5,30 @@ import { FiMenu } from "react-icons/fi";
 import { MdLogout } from "react-icons/md";
 
 const Navbar = () => {
+  // State to manage the visibility of the mobile menu
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  // Handles user logout
   const handleLogout = () => {
-    localStorage.removeItem("isAuthenticated");
-    navigate("/login");
+    localStorage.removeItem("isAuthenticated"); // Remove authentication token
+    navigate("/login"); // Redirect to login page
     setMenuOpen(false); // Close the menu after logout
   };
 
+  // Toggles the mobile menu open/close state
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);
   };
 
+  // Closes the menu after theme toggle
   const handleThemeToggle = () => {
-    setMenuOpen(false); // Close the menu after theme toggle
+    setMenuOpen(false);
   };
 
   return (
     <nav className="w-full flex items-center justify-between px-8 py-4 bg-gray-100 dark:bg-gray-900 shadow-md">
-      {/* Left - Logo */}
+      {/* Left - Brand Logo */}
       <div className="text-2xl font-bold text-gray-900 dark:text-white">Quizo</div>
 
       {/* Right - Navigation Links (Visible on larger screens) */}
@@ -49,7 +53,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Hamburger Menu - Visible on all screen sizes */}
+      {/* Hamburger Menu (Visible on all screen sizes for responsiveness) */}
       <div className="relative">
         {/* Hamburger Button */}
         <button
@@ -59,10 +63,10 @@ const Navbar = () => {
           <FiMenu className="text-gray-800 dark:text-gray-300" /> {/* Ensure visibility in light mode */}
         </button>
 
-        {/* Dropdown Menu */}
+        {/* Dropdown Menu (Visible on small screens when menu is open) */}
         {menuOpen && (
           <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden">
-            {/* Navigation Links (Visible on small screens) */}
+            {/* Navigation Links (for small screens) */}
             <div className="md:hidden">
               <Link
                 to="/dashboard"
@@ -87,7 +91,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Mode Toggle */}
+            {/* Theme Toggle Option */}
             <div
               className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700"
               onClick={handleThemeToggle}
