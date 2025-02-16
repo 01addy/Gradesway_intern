@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=mysql://root:VDLReJUBLGuSbjWsAgrOjQSsZqNKNfCA@monorail.proxy.rlwy.net:10370/railway
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:80"
+    environment:
+      - VITE_API_URL=http://backend:5000
+    depends_on:
+      - backend
+
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: quizo
+    ports:
+      - "3307:3306"
