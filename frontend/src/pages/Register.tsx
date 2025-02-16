@@ -29,7 +29,7 @@ const Register = () => {
     setIsLoading(true); // Show "Registering..." on button click
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const response = await axios.post("https://gradesway-intern.onrender.com/api/auth/register", formData);
       if (response.status === 201) {
         navigate("/login"); // Redirect to login after successful registration
       }
