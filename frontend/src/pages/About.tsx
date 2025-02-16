@@ -122,44 +122,77 @@ const About = () => {
       >
         <h2 className="text-3xl font-bold text-white text-center mb-6">Tech Stack Used</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Frontend Card */}
-          <Card className="dark:bg-gray-800">
-            <CardHeader>
-              <CardTitle className="text-xl text-[#7a8ae5]">Frontend</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>
-                  <b>React.js:</b> Dynamic UI
-                </li>
-                <li>
-                  <b>Tailwind CSS:</b> Modern styling
-                </li>
-                <li>
-                  <b>Framer Motion:</b> Smooth animations
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
+      <div className="grid md:grid-cols-2 gap-6">
+        {/* Frontend Card */}
+        <Card className="dark:bg-gray-800">
+          <CardHeader>
+            <CardTitle className="text-xl text-[#7a8ae5]">Frontend</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
+              <li>
+                <b>React.js:</b> Built the application
+              </li>
+              <li>
+                <b>ShadCN UI:</b> Modern, clean, and responsive UI components
+              </li>
+              <li>
+                <b>Axios / Fetch API:</b> Handling API interactions
+              </li>
+              <li>
+                <b>Framer Motion:</b> Smooth animations
+              </li>
+              <li>
+                <b>Tailwind CSS:</b> Utility-first styling
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      
+        {/* Backend Card */}
+        <Card className="dark:bg-gray-800">
+          <CardHeader>
+            <CardTitle className="text-xl text-[#7a8ae5]">Backend</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
+              <li>
+                <b>Node.js & Express:</b> API development
+              </li>
+              <li>
+                <b>TypeScript:</b> Strongly typed backend
+              </li>
+              <li>
+                <b>Prisma ORM:</b> Database interactions
+              </li>
+              <li>
+                <b>CRUD Operations:</b> Quiz management features
+              </li>
+              <li>
+                <b>Basic Authentication:</b> User management (No JWT required)
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      
+        {/* Database Card */}
+        <Card className="dark:bg-gray-800">
+          <CardHeader>
+            <CardTitle className="text-xl text-[#7a8ae5]">Database</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
+              <li>
+                <b>MySQL / PostgreSQL:</b> Database for storing quizzes
+              </li>
+              <li>
+                <b>Prisma ORM:</b> Query builder for database interactions
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
 
-          {/* Backend Card */}
-          <Card className="dark:bg-gray-800">
-            <CardHeader>
-              <CardTitle className="text-xl text-[#7a8ae5]">Backend</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
-                <li>
-                  <b>Node.js & Express:</b> API development
-                </li>
-                <li>
-                  <b>Railway:</b> MySQL database
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
       </motion.div>
     </div>
   );
