@@ -183,7 +183,7 @@ const About = () => {
           <CardContent>
             <ul className="list-disc ml-6 space-y-2 text-gray-700 dark:text-gray-300">
               <li>
-                <b>MySQL / PostgreSQL:</b> Database for storing quizzes
+                <b>MySQL:</b> Database for storing quizzes
               </li>
               <li>
                 <b>Prisma ORM:</b> Query builder for database interactions
