@@ -6,7 +6,7 @@ import quizRoutes from "./routes/quizRoutes"; // Ensure correct path
 
 const app = express();
 
-app.use(cors({ origin: "https://gradesway-intern.vercel.app/", credentials: true }));
+app.use(cors({ origin: "https://gradesway-intern.vercel.app", credentials: true }));
 app.use(express.json());
 
 // **Session Middleware**
