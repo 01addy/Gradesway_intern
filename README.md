@@ -163,7 +163,7 @@ npm run dev
         "description": "Explore the world with questions on countries, capitals, landmarks, and natural wonders. How well do you know the globe?",
         "userId": 1
     },
-  ]
+  ] .... Plus other quizzes present in database 
   ```
 
 - **Update a Quiz**
