@@ -3,8 +3,6 @@
 
 Quizo is a web-based quiz management system that allows users to create, manage, and take quizzes efficiently. The application provides a user-friendly interface for quiz management and is built using modern web technologies.
 
-## 🚀 Live Demo
-🔗 [Quizo Live Demo](https://gradesway-intern.vercel.app/)
 
 ---
 
